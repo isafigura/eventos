@@ -15,7 +15,7 @@ public class EventListController {
 
     @FXML
     public void initialize() {
-        refreshList();
+        refreshList(); // carrega os eventos do arquivo
     }
 
     public void refreshList() {
@@ -25,9 +25,9 @@ public class EventListController {
         }
     }
 
-
     @FXML
     protected void addEvent() {
+        // vai para a tela de criação de evento
         SceneController.switchTo("create_event.fxml", "Novo Evento");
     }
 
@@ -41,5 +41,4 @@ public class EventListController {
         SceneController.setLoggedUser(null);
         SceneController.changeScene("login.fxml");
     }
-
 }
