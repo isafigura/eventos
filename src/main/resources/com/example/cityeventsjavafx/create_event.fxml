@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.CreateEventController">
+
+    <Label text="Novo Evento" style="-fx-font-size: 22;" />
+
+    <TextField fx:id="titleField" promptText="Título" />
+    <TextField fx:id="categoryField" promptText="Categoria" />
+    <TextArea fx:id="descriptionArea" promptText="Descrição" />
+    <DatePicker fx:id="datePicker" />
+
+    <Button text="Salvar" onAction="#saveEvent" />
+    <Button text="Voltar" onAction="#back" />
+
+    <Label fx:id="messageLabel" />
+
+</VBox>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ChartController">
+
+    <Label text="Gráfico de Eventos por Categoria" style="-fx-font-size: 22;" />
+
+    <BarChart fx:id="barChart" prefWidth="400" prefHeight="300">
+        <xAxis>
+            <CategoryAxis label="Categoria" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Quantidade" />
+        </yAxis>
+    </BarChart>
+
+    <Button text="Voltar" onAction="#back" />
+
+</VBox>

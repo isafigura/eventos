@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.RegisterController">
+
+    <Label text="Cadastro" style="-fx-font-size: 22;" />
+
+    <TextField fx:id="nameField" promptText="Nome" />
+    <TextField fx:id="emailField" promptText="E-mail" />
+    <PasswordField fx:id="passwordField" promptText="Senha" />
+
+    <Button text="Cadastrar" onAction="#handleRegister" />
+    <Button text="Voltar" onAction="#backToLogin" />
+
+    <Label fx:id="errorLabel" textFill="green" />
+
+</VBox>
