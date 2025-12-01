@@ -28,10 +28,11 @@ public class FileEventDao implements EventDao {
             for (String line : lines) {
                 String[] p = line.split(";");
 
-                // Formato: name ; date ; description
-                if (p.length == 3) {
-                    Event e = new Event(p[0], p[1]); // construtor simples (name, date)
-                    e.setDescription(p[2]); // adiciona description
+                // Formato: name ; date ; description ; category
+                if (p.length == 4) {
+                    Event e = new Event(p[0], p[1]);
+                    e.setDescription(p[2]);
+                    e.setCategory(p[3]); // agora lê a categoria
                     list.add(e);
                 }
             }
@@ -47,7 +48,8 @@ public class FileEventDao implements EventDao {
             writer.write(
                     event.getName() + ";" +
                             event.getDate() + ";" +
-                            event.getDescription()
+                            event.getDescription() + ";" +
+                            event.getCategory()  // salva a categoria
             );
             writer.newLine();
         } catch (Exception e) {

@@ -9,7 +9,10 @@
     <Label text="Novo Evento" style="-fx-font-size: 22;" />
 
     <TextField fx:id="titleField" promptText="Título" />
-    <TextField fx:id="categoryField" promptText="Categoria" />
+
+    <!-- ComboBox para categoria -->
+    <ComboBox fx:id="categoryComboBox" promptText="Selecione a Categoria" />
+
     <TextArea fx:id="descriptionArea" promptText="Descrição" />
     <DatePicker fx:id="datePicker" />
 
@@ -19,3 +22,4 @@
     <Label fx:id="messageLabel" />
 
 </VBox>
+

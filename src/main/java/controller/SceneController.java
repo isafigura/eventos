@@ -15,7 +15,6 @@ public class SceneController {
     private static Stage stage;
     private static User loggedUser;
 
-    // Armazena os controllers carregados
     private static final Map<String, Object> controllers = new HashMap<>();
 
     public static void setStage(Stage s) {
@@ -35,13 +34,15 @@ public class SceneController {
      */
     public static void switchTo(String fxml, String title) {
         try {
-            FXMLLoader loader = new FXMLLoader(SceneController.class.getResource("/com/example/cityeventsjavafx/" + fxml));
+            FXMLLoader loader = new FXMLLoader(SceneController.class.getResource("/fxml/" + fxml));
             Parent root = loader.load();
 
-            // Guarda o controller carregado
             controllers.put(fxml, loader.getController());
 
             Scene scene = new Scene(root);
+
+            scene.getStylesheets().add(SceneController.class.getResource("/fxml/css/styles.css").toExternalForm());
+
             stage.setScene(scene);
             stage.setTitle(title);
             stage.show();
@@ -56,10 +57,17 @@ public class SceneController {
      */
     public static void changeScene(String fxml) {
         try {
-            FXMLLoader loader = new FXMLLoader(SceneController.class.getResource("/com/example/cityeventsjavafx/" + fxml));
+            FXMLLoader loader = new FXMLLoader(SceneController.class.getResource("/fxml/" + fxml));
             Parent root = loader.load();
+
             controllers.put(fxml, loader.getController());
-            stage.getScene().setRoot(root);
+
+            Scene scene = stage.getScene();
+            scene.setRoot(root);
+
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(SceneController.class.getResource("/fxml/css/styles.css").toExternalForm());
+
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Erro ao carregar FXML: " + fxml);

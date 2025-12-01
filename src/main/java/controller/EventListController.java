@@ -21,9 +21,17 @@ public class EventListController {
     public void refreshList() {
         eventList.getItems().clear();
         for (Event e : eventDao.findAll()) {
-            eventList.getItems().add(e.getName() + " — " + e.getDate());
+            String itemText = String.format(
+                    "Título: %s%nData: %s%nCategoria: %s%nDescrição: %s%n-----------------------------",
+                    e.getName(),
+                    e.getDate(),
+                    e.getCategory(),
+                    e.getDescription()
+            );
+            eventList.getItems().add(itemText);
         }
     }
+
 
     @FXML
     protected void addEvent() {

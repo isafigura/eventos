@@ -1,5 +1,4 @@
-1;2025-12-03;1
-2;2025-12-11;2
-show;2025-12-17;show de rock
-show de rock;2025-12-17;legal
-show de pagode;2025-12-31;dfsfds
+Show rock;2025-12-09;Um show muito legal;Cultura
+Semana academica;2025-12-12;Semana academica da unipar;Tecnologia
+fhf;2025-12-16;fsdfs;Educação
+fsdfsd;2025-12-16;fdfgd;Tecnologia

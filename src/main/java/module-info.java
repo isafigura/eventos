@@ -8,4 +8,9 @@ module com.example.cityeventsjavafx {
     exports app;
     exports controller;
     exports model;
+
+    requires junit;
+    opens test to junit;
+
+
 }

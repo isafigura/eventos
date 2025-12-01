@@ -31,7 +31,6 @@ public class Event {
 
     public String getCategory() { return category; }
 
-    // MÉTODOS QUE FALTAVAM
     public void setDescription(String description) {
         this.description = description;
     }

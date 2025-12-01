@@ -35,15 +35,13 @@ public class LoginController {
             return;
         }
 
-        // transforma a senha digitada em MD5 para comparar
         String hashed = HashUtil.md5(password);
 
         if (!hashed.equals(user.getPassword())) {
             messageLabel.setText("Senha incorreta.");
             return;
         }
-
-        // login bem-sucedido
+        
         SceneController.setLoggedUser(user);
         SceneController.changeScene("event_list.fxml");
     }
